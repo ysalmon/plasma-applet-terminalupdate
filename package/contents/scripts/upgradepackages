@@ -8,7 +8,7 @@ function echoCommand () {
 echoCommand "apt list --upgradeable"
 
 # Ignore "apt API isn't stable warning" sent to stderr.
-upgradeablePackages=`apt list --upgradeable 2>/dev/null`
+# upgradeablePackages=`apt list --upgradeable 2>/dev/null`
 
 # Trim "Listing..." on line #1 by starting at line #2.
 # Colorize padoka ppa updates brown
@@ -16,14 +16,14 @@ upgradeablePackages=`apt list --upgradeable 2>/dev/null`
 # Reapply the green color for everything else.
 # Colorize the word security in red.
 # apt list --upgradeable \
-echo "$upgradeablePackages" \
-    | tail --lines=+2 \
-    | sed "s/\(.*\)\(\/.*\)\(padoka0\)\(.*\)/$(tput setaf 3)\1$(tput sgr0)\2$(tput setaf 3)\3$(tput sgr0)\4/g" \
-    | sed "s/\(.*\)\(\/.*\)\(neon\)\(.*\)/$(tput setaf 6)\1$(tput sgr0)\2$(tput setaf 6)\3$(tput sgr0)\4/g" \
-    | sed "s/\(.*\)\(\/.*\)/$(tput setaf 2)\1$(tput sgr0)\2/g" \
-    | sed "s/\(security\)/$(tput setaf 1)\1$(tput sgr0)/g"
+# echo "$upgradeablePackages" \
+#    | tail --lines=+2 \
+#    | sed "s/\(.*\)\(\/.*\)\(padoka0\)\(.*\)/$(tput setaf 3)\1$(tput sgr0)\2$(tput setaf 3)\3$(tput sgr0)\4/g" \
+#    | sed "s/\(.*\)\(\/.*\)\(neon\)\(.*\)/$(tput setaf 6)\1$(tput sgr0)\2$(tput setaf 6)\3$(tput sgr0)\4/g" \
+#    | sed "s/\(.*\)\(\/.*\)/$(tput setaf 2)\1$(tput sgr0)\2/g" \
+#    | sed "s/\(security\)/$(tput setaf 1)\1$(tput sgr0)/g"
 
-echo ""
+#echo ""
 echoCommand "sudo apt full-upgrade"
 sudo apt full-upgrade
 
