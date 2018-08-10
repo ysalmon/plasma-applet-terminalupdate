@@ -84,10 +84,10 @@ Item {
     // }
 
     function action_update() {
-        execScript("scripts/upgradepackages")
+        executable.exec("update-manager --no-update")
     }
 
     function action_checkForUpdates() {
-        execScript("scripts/updatepackages")
+        executable.exec("update-manager --no-focus-on-map")
     }
 }
