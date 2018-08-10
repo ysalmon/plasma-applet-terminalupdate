@@ -6,11 +6,11 @@ Icon=update-none
 Type=Service
 
 X-KDE-ServiceTypes=Plasma/Applet
-X-KDE-PluginInfo-Author=Chris Holland
-X-KDE-PluginInfo-Email=zrenfire@gmail.com
-X-KDE-PluginInfo-Name=com.github.zren.terminalupdate
-X-KDE-PluginInfo-Version=3
-X-KDE-PluginInfo-Website=https://github.com/Zren/plasma-applet-terminalupdate
+X-KDE-PluginInfo-Author=Chris Holland and Yann Salmon
+X-KDE-PluginInfo-Email=nomail_see_github_profile
+X-KDE-PluginInfo-Name=com.github.ysalmon.terminalupdate
+X-KDE-PluginInfo-Version=4
+X-KDE-PluginInfo-Website=https://github.com/ysalmon/plasma-applet-terminalupdate
 X-KDE-PluginInfo-Category=Online Services
 X-KDE-PluginInfo-Depends=
 X-KDE-PluginInfo-License=GPL
