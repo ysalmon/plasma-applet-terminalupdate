@@ -1,3 +1,7 @@
+## v4 - August 10 2018
+* Forked by ysalmon to use Ubuntu update-manager instead of the original scripts of earlier versions.
+* Changed the plasmoid name from ```com.github.zren.terminalupdate``` to ```com.github.ysalmon.terminalupdate``` as a result and to avoid glitches when switching from one version to the other in plasmashell
+
 ## v3 - March 13 2018
 
 * Fix position of update status text (should of been above the button).
