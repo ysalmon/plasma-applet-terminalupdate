@@ -69,12 +69,6 @@ Item {
         plasmoid.setAction("configure", i18n("Updates Settings"), "configure");
     }
 
-    function execScript(scriptRelativePath) {
-        var scriptPath = plasmoid.file("", scriptRelativePath)
-        var command = "konsole --hide-menubar --hide-tabbar --hold -e \'" + scriptPath + "\'"
-        executable.exec(command)
-    }
-
     function action_openAptHistoryLog() {
         executable.exec("xdg-open /var/log/apt/history.log")
     }
